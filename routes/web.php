@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home1');
 })->name('home');
 
 Route::get('/about', function(){
@@ -25,9 +25,19 @@ Route::get('/contact', function(){
     return view('contact');
 })->name('contact');
 
-// Product-related routes
-Route::get('/products/create', [ProductController::class, 'create'])->name('products.create'); // Show product form
-Route::post('/products', [ProductController::class, 'store'])->name('products.store'); // Store new product
-Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit'); // Show edit form
-Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update'); // Update product
-Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy'); // Delete product
+// Product-related routes with authentication
+Route::middleware('auth')->group(function () {
+    Route::get('/products/create', [ProductController::class, 'create'])->name('products.create'); // Show product form
+    Route::post('/products', [ProductController::class, 'store'])->name('products.store'); // Store new product
+    Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit'); // Show edit form
+    Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update'); // Update product
+    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy'); // Delete product
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

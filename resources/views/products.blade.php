@@ -1,4 +1,4 @@
-@extends('layouts.app') {{-- Extend a common layout --}}
+@extends('layouts.app1') {{-- Extend a common layout --}}
 
 @section('title', 'Products') {{-- Set the page title --}}
 @section('styles')
