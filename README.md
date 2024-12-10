@@ -11,6 +11,7 @@ Welcome to **Bonsai Pet Shop**, an innovative e-commerce platform where pet enth
 
 - **Products Section**: Browse and shop for high-quality pet products, including food, accessories, and grooming tools.
 - **Services Section**: Explore grooming, training, veterinary consultations, and other pet-related services.
+- **User Authentication**: Allows only authorized users to add, update and delete products.
 - **User-Friendly Interface**: Intuitive design for a seamless user experience.
 - **Responsive Design**: Accessible across all devices — desktop, tablet, and mobile.
 ---
@@ -52,7 +53,7 @@ Follow these steps to set up the project locally:
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd laravel-project
+   cd Pet-Shop-Website-Laravel
    ```
 3. **Install dependencies**:
    ```bash
