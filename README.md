@@ -43,32 +43,83 @@ Welcome to **Bonsai Pet Shop**, an innovative e-commerce platform where pet enth
 
 ---
 
+# Pet Shop Website - Laravel
+
 ## 📦 Installation and Setup
 
 Follow these steps to set up the project locally:
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/bonsai-pet-shop.git
-   ```
-2. **Navigate to the project directory**:
-   ```bash
-   cd Pet-Shop-Website-Laravel
-   ```
-3. **Install dependencies**:
-   ```bash
-   composer install
-   ```
-4. **Set up environment variables**:
-   - Create a `.env` file based on `.env.example`.
-   - Update database credentials and other configuration details.
-5. **Run database migrations**:
-   ```bash
-   php artisan migrate
-   ```
-6. **Start the local development server**:
-   ```bash
-   php artisan serve
-   ```
+### Clone the Repository
+```bash
+git clone https://github.com/navaaliqbal/Pet-Shop-Website-Laravel.git
+```
+
+### Navigate to the Project Directory
+```bash
+cd Pet-Shop-Website-Laravel
+```
+
+### Install PHP Dependencies
+Check if Composer is installed:
+```bash
+composer --version
+```
+If Composer is available, run:
+```bash
+composer install
+```
+
+### Configure Environment Variables
+Create a `.env` file based on `.env.example`:
+```bash
+cp .env.example .env
+```
+Update the `.env` file with your database credentials and other configuration details.
+
+### Generate Application Key
+```bash
+php artisan key:generate
+```
+
+### Run Database Migrations
+```bash
+php artisan migrate
+```
+
+If applicable, seed the database:
+```bash
+php artisan db:seed
+```
+
+### Install Node.js Dependencies
+Check if Node.js and npm are installed:
+```bash
+npm --version
+node --version
+```
+Then install the dependencies:
+```bash
+npm install
+```
+
+### Build Frontend Assets
+Build the assets for production:
+```bash
+npm run build
+```
+For development, run:
+```bash
+npm run dev
+```
+
+### Start the Development Server
+Run the Laravel development server:
+```bash
+php artisan serve
+```
+
+You can now access the application at `http://127.0.0.1:8000/`.
+
+
 
 
